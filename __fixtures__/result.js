@@ -5,4 +5,4 @@ export default `{
     - timeout: 50
     + timeout: 20
     + verbose: true
-}`
+}`;
