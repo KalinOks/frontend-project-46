@@ -1,0 +1,24 @@
+name: Run Jest
+
+on:
+  push:
+    branches: "**"
+    tags: "**"
+
+jobs:
+  jest:
+    name: Run jest test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+      actions: read 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Install dep
+        run: npm install
+
+      - name: Run tests
+        run: npm run test
