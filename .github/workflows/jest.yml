@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Install dep
         run: |
-          npm ci
+          npm install
 
       - name: Run tests
         run: npm run test
