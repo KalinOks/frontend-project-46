@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "npm eslint ."
   },
   "bin": {
     "gendiff": "bin/gendiff.js"
