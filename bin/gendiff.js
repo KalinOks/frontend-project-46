@@ -2,7 +2,7 @@
 
 import { program } from 'commander';
 import path from 'path';
-import createDiff from '../index.js';
+import createDiff from '../src/index.js';
 
 program.version('1.0.0');
 program.addHelpText('before', 'Compares two configuration files and shows a difference.');
