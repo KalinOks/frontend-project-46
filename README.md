@@ -6,4 +6,3 @@
 
 gendiff
 [![asciicast](https://asciinema.org/a/YqGJ2rtXLqKfvHuAzztzAcFeE.svg)](https://asciinema.org/a/YqGJ2rtXLqKfvHuAzztzAcFeE)
-check
