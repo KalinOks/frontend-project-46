@@ -7,3 +7,5 @@
 
 gendiff
 [![asciicast](https://asciinema.org/a/YqGJ2rtXLqKfvHuAzztzAcFeE.svg)](https://asciinema.org/a/YqGJ2rtXLqKfvHuAzztzAcFeE)
+
+[![asciicast](https://asciinema.org/a/yStBXDwoNa3vpvwgAmS6GQDhm.svg)](https://asciinema.org/a/yStBXDwoNa3vpvwgAmS6GQDhm)
