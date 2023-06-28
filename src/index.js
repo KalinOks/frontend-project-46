@@ -1,9 +1,9 @@
-import { readFileSync } from 'node:fs';
 import _ from 'lodash';
+import parser from './parser.js';
 
 export default (filePath1, filePath2) => {
-  const obj1 = JSON.parse(readFileSync(filePath1));
-  const obj2 = JSON.parse(readFileSync(filePath2));
+  const obj1 = parser(filePath1);
+  const obj2 = parser(filePath2);
 
   const keys1 = _.orderBy(Object.keys(obj1), (key) => key, ['asc']);
   const keys2 = _.orderBy(Object.keys(obj2), (key) => key, ['asc']);
