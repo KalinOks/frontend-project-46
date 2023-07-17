@@ -9,7 +9,7 @@ program.addHelpText('before', 'Compares two configuration files and shows a diff
 
 program.argument('<filepath1>');
 program.argument('<filepath2>');
-program.option('-f, --format <type>', 'output format');
+program.option('-f, --format <type>', 'output format', 'stylish');
 
 program.action((filepath1, filepath2) => {
   const absPath1 = path.resolve(process.cwd(), filepath1);
