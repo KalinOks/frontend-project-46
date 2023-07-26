@@ -1,6 +1,7 @@
 import path from 'path';
 import createDiff from '../src/index.js';
 import result from '../__fixtures__/result.js';
+import result2 from '../__fixtures__/result2.js';
 
 describe('createDiff', () => {
   it('should work with yml files', () => {
@@ -24,7 +25,15 @@ describe('createDiff', () => {
     const secondFilePath = path.resolve(process.cwd(), '__fixtures__/file2.json');
 
     const diff = createDiff(firstFilePath, secondFilePath);
-    console.log(diff);
     expect(diff).toEqual(result);
+  });
+
+  it('should describe', () => {
+    const firstFilePath = path.resolve(process.cwd(), '__fixtures__/file1.json');
+    const secondFilePath = path.resolve(process.cwd(), '__fixtures__/file2.json');
+
+    const diff = createDiff(firstFilePath, secondFilePath, 'plain');
+    console.log(diff);
+    expect(diff).toEqual(result2);
   });
 });

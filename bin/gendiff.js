@@ -11,10 +11,11 @@ program.argument('<filepath1>');
 program.argument('<filepath2>');
 program.option('-f, --format <type>', 'output format', 'stylish');
 
+const options = program.opts();
 program.action((filepath1, filepath2) => {
   const absPath1 = path.resolve(process.cwd(), filepath1);
   const absPath2 = path.resolve(process.cwd(), filepath2);
-  const diff = createDiff(absPath1, absPath2);
+  const diff = createDiff(absPath1, absPath2, options.format);
 
   console.log(diff);
 });

@@ -1,10 +1,16 @@
 import parseToObject from './parser/parser.js';
-import parseToString from './parser/stylish.js';
 import { createObjectsDiff } from './diff.js';
+import { plain, stylish } from './formaters/index.js';
 
-export default (filePath1, filePath2) => {
+const types = {
+  stylish: 'stylish',
+  plain: 'plain',
+}
+
+export default (filePath1, filePath2, type = types.stylish) => {
   const firstFile = parseToObject(filePath1);
   const secondFile = parseToObject(filePath2);
 
-  return parseToString(createObjectsDiff(firstFile, secondFile));
+  const formatter = type === types.stylish ? stylish : plain;
+  return formatter(createObjectsDiff(firstFile, secondFile));
 };
